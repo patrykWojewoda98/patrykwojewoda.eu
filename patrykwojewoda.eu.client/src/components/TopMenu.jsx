@@ -17,7 +17,11 @@ export const TopMenu = () => {
       style={{ height: "1%" }}
     >
       <div>
-        <Navbar collapseOnSelect expand="lg">
+        <Navbar
+          collapseOnSelect
+          expand="lg"
+          variant={isDark ? "dark" : "light"}
+        >
           <Container>
             <Navbar.Brand>
               <Link to="/">
@@ -30,24 +34,24 @@ export const TopMenu = () => {
 
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link as={Link} to="/AboutMe">
-                  O mnie
-                </Nav.Link>
-                <Nav.Link as={Link} to="/Projects">
-                  Projekty
-                </Nav.Link>
-                <Nav.Link as={Link} to="/References">
-                  Referencje
-                </Nav.Link>
-                <Nav.Link as={Link} to="/Contact">
-                  Kontakt
-                </Nav.Link>
-              </Nav>
               <Toggle
                 isChecked={isDark}
                 handleChange={() => setIsDark(!isDark)}
               />
+              <Nav className="me-auto">
+                <Nav.Link as={Link} to="/about_me">
+                  O mnie
+                </Nav.Link>
+                <Nav.Link as={Link} to="/projects">
+                  Projekty
+                </Nav.Link>
+                <Nav.Link as={Link} to="/references">
+                  Referencje
+                </Nav.Link>
+                <Nav.Link as={Link} to="/contact">
+                  Kontakt
+                </Nav.Link>
+              </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>

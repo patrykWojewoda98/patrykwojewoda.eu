@@ -24,3 +24,10 @@
   --toggle-bg: #283452;
   --toggle-fg: #00a6ff;
 }
+
+h1,
+h2,
+h4,
+strong {
+  color: var(--primary-text-color);
+}

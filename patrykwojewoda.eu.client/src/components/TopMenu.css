@@ -1,6 +1,15 @@
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Zaokrąglenie krawędzi */
+  border: 2px solid var(--foreground-color); /* Dodanie obramowania */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodanie cienia */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animacja */
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Powiększenie przy najechaniu */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Zwiększenie cienia przy najechaniu */
 }
 
 a {
