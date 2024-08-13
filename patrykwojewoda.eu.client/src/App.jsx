@@ -17,86 +17,60 @@ import { SiCplusplus } from "react-icons/si";
 import { FaDatabase } from "react-icons/fa";
 import { RiEnglishInput } from "react-icons/ri";
 import { GiPoland } from "react-icons/gi";
+import { FaHandsHelping } from "react-icons/fa";
+import { MdManageSearch } from "react-icons/md";
+import { IoMdTime } from "react-icons/io";
+import { GiCheckMark } from "react-icons/gi";
+import { GiAchievement } from "react-icons/gi";
+import { useTranslation } from "react-i18next";
+import { ContactForm } from "./components/ContactForm";
 
 export const App = () => {
   const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [isDark, setIsDark] = useLocalStorage("isDark", preference);
+  const { t } = useTranslation();
 
   return (
-    <Container fluid className="App" data-theme={isDark ? "dark" : "light"}>
+    <Container fluid className="App">
       <Row>
+        <Col xs={1} md={1} />
         <Col xs={2} md={2}>
           <Image
             src="/src/components/pictures/IMG-20240616-WA0000.jpg"
             fluid
-            className="photo"
+            className="profilePhoto"
           />
         </Col>
-        <Col style={{ marginTop: "10%" }}>
-          <h1>
-            <strong>Cześć, Nazywam się </strong>
-            <strong style={{ color: "red" }}>Patryk Wojewoda</strong>
-          </h1>
-          <h2>
-            <strong>Programista zarówno aplikcaji biznesowych</strong>
-          </h2>
-          <h2>
-            <strong>jak i maszyn CNC</strong>
-          </h2>
+        <Col style={{ marginTop: "5%" }}>
+          <h1>{t("aboutMe.introduction")}</h1>
         </Col>
-        <Col>
-          <h2>
-            <strong>Skontaktuj sie ze mną</strong>
-          </h2>
-          <Form>
-            <Row>
-              <Col>
-                <h4>Imie</h4>
-                <Form.Control placeholder="Jan" />
-              </Col>
-              <Col>
-                <h4>Nazwisko</h4>
-                <Form.Control placeholder="Kowalski" />
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <h4>Adres email</h4>
-                <Form.Control
-                  type="email"
-                  placeholder="jan.kowalski@gmail.com"
-                />
-              </Col>
-              <Col>
-                <h4>Telefon</h4>
-                <Form.Control type="tel" placeholder="123-456-789" />
-              </Col>
-            </Row>
-            <Row>
-              <h4>Twoja wiadomość</h4>
-              <FloatingLabel
-                controlId="floatingTextarea2"
-                label="Twoja wiadomość"
-              >
-                <Form.Control
-                  as="textarea"
-                  placeholder="Leave a comment here"
-                  style={{ height: "100px" }}
-                />
-              </FloatingLabel>
-            </Row>
-            <Button variant="secondary" type="submit">
-              Submit
-            </Button>
-          </Form>
-        </Col>
+
+        <Row>
+          <Col xs={1} md={1} />
+          <Col>
+            <div
+              style={{ display: "flex", alignItems: "center", height: "100%" }}
+            >
+              <h3>{t("aboutMe.mainSection")}</h3>
+            </div>
+          </Col>
+          <Col>
+            <Image
+              src="/src/components/pictures/background.jpg"
+              className="photo"
+            />
+          </Col>
+        </Row>
       </Row>
+
       <Row>
-        <Card>
+        <Card className="skills">
           <Card.Body>
-            <Card.Title className="text-center">Moje umiejętności</Card.Title>
+            <Card.Title className="text-center">
+              {t("skills.sectionTitle")}
+            </Card.Title>
             <Card.Subtitle className="mb-2 text-muted">
-              Umiejętności Twarde
+              {t("skills.hardSkills")}
             </Card.Subtitle>
             <Row>
               <Col>
@@ -117,29 +91,49 @@ export const App = () => {
               </Col>
               <Col>
                 <BsBootstrapFill />
-                BootStrap
+                Bootstrap
               </Col>
               <Col>
                 <FaDatabase />
                 SQL
               </Col>
             </Row>
-            <Card.Subtitle className="mb-2 text-muted">Język</Card.Subtitle>
+            <Card.Subtitle className="my-2 text-muted">
+              {t("skills.language")}
+            </Card.Subtitle>
             <Row>
               <Col>
-                <GiPoland /> Polski-Ojczysty
-                <RiEnglishInput className="ml-2" />
-                Angielski-B2
+                <GiPoland /> {t("skills.polish")}
+                <RiEnglishInput style={{ marginLeft: "20px" }} />
+                {t("skills.english")}
               </Col>
             </Row>
 
-            <Card.Subtitle className="mb-2 text-muted">
-              Umiejętności miękkie
+            <Card.Subtitle className="my-2 text-muted">
+              {t("skills.softSkills.title")}
             </Card.Subtitle>
-            <Card.Link href="#">Card Link</Card.Link>
-            <Card.Link href="#">Another Link</Card.Link>
+            <Row>
+              <Col>
+                <FaHandsHelping /> {t("skills.softSkills.communication")}
+              </Col>
+              <Col>
+                <MdManageSearch /> {t("skills.softSkills.analyticalThinking")}
+              </Col>
+              <Col>
+                <IoMdTime /> {t("skills.softSkills.timeManagement")}
+              </Col>
+              <Col>
+                <GiCheckMark /> {t("skills.softSkills.taskFocus")}
+              </Col>
+              <Col>
+                <GiAchievement /> {t("skills.softSkills.selfMotivation")}
+              </Col>
+            </Row>
           </Card.Body>
         </Card>
+      </Row>
+      <Row>
+        <ContactForm />
       </Row>
     </Container>
   );

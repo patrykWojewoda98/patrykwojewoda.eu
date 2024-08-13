@@ -15,19 +15,13 @@
   --toggle-fg: #ffd000;
 }
 
-[data-theme="dark"] {
-  --background-color: #0a0a0a;
-  --foreground-color: #567aff;
-  --topmenu-background-color: #353434;
-  --primary-text-color: #f6f6f6;
-  --secondary-text-color: #0a0a0a;
-  --toggle-bg: #283452;
-  --toggle-fg: #00a6ff;
-}
-
 h1,
 h2,
 h4,
 strong {
+  color: var(--primary-text-color);
+}
+
+.CardSubtitle {
   color: var(--primary-text-color);
 }
