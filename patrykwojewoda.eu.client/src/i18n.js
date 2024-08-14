@@ -17,6 +17,12 @@ i18n
             mainSection:
               "Młody i ambitny programista backend/full-stack, przechodzący z roli operatora i programisty CNC. Chętny do nauki nowych języków programowania i technologii, gotowy na nowe wyzwania w dziedzinie rozwoju oprogramowania. Z 7-letnim doświadczeniem w precyzyjnej i niestandardowej produkcji, wnoszę ze sobą silne umiejętności analityczne i rozwiązywania problemów. Obecnie poszukuję możliwości zmiany kariery na branżę rozwoju oprogramowania, aby wykorzystać swoje techniczne zaplecze i podjąć nowe wyzwania.",
           },
+
+          whyMe: {
+            mainQuestion: "Dlaczego warto mnie zatrudnić?",
+            reason1: "⚫Mocne zaangażowanie",
+          },
+
           navigation: {
             aboutMe: "O mnie",
             projects: "Projekty",
@@ -55,6 +61,11 @@ i18n
               "Hi, my name is Patryk Wojewoda, a developer of both business applications and CNC machines.",
             mainSection:
               "Young and ambitious backend/full-stack developer transitioning from a CNC operator and programmer role. Eager to learn new programming languages and technologies, and ready for new challenges in the software development field. With 7 years of experience in precision and custom manufacturing, I bring a strong analytical mindset and problem-solving skills. Currently seeking to shift my career to the software development industry to leverage my technical background and embrace new opportunities.",
+          },
+
+          whyMe: {
+            mainQuestion: "Why You Should Hire Me?",
+            reason1: "⚫Strong Commitment",
           },
 
           navigation: {
