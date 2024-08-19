@@ -1,13 +1,10 @@
 import React from "react";
-import useLocalStorage from "use-local-storage";
-import Button from "react-bootstrap/Button";
+
 import "./App.css";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
-import Form from "react-bootstrap/Form";
-import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Card from "react-bootstrap/Card";
 import { FaJava } from "react-icons/fa";
 import { BsBootstrapFill } from "react-icons/bs";
@@ -27,34 +24,44 @@ import { ContactForm } from "./components/ContactForm";
 import { motion } from "framer-motion";
 
 export const App = () => {
-  const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const [isDark, setIsDark] = useLocalStorage("isDark", preference);
   const { t } = useTranslation();
 
   return (
     <Container fluid className="App">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { delay: 0.2, duration: 0.5 },
-        }}
-        viewport={{ once: false, amount: 0.2 }}
-      >
-        <Row>
-          <Col xs={1} md={1} />
-          <Col xs={2} md={2}>
-            <Image
-              src="/src/components/pictures/IMG-20240616-WA0000.jpg"
-              fluid
-              className="profilePhoto"
-            />
-          </Col>
-          <Col style={{ marginTop: "5%" }}>
-            <h1>{t("aboutMe.introduction")}</h1>
-          </Col>
+      <Row>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.2, duration: 0.5 },
+          }}
+          viewport={{ once: false, amount: 0.2 }}
+        >
+          <Row>
+            <Col xs={1} md={1} />
+            <Col xs={2} md={2}>
+              <Image
+                src="/src/components/pictures/IMG-20240616-WA0000.jpg"
+                fluid
+                className="profilePhoto"
+              />
+            </Col>
+            <Col style={{ marginTop: "5%" }}>
+              <h1>{t("aboutMe.introduction")}</h1>
+            </Col>
+          </Row>
+        </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.8, duration: 0.5 },
+          }}
+          viewport={{ once: false, amount: 0.2 }}
+        >
           <Row>
             <Col xs={1} md={1} />
             <Col>
@@ -75,11 +82,11 @@ export const App = () => {
               />
             </Col>
           </Row>
-        </Row>
-      </motion.div>
+        </motion.div>
+      </Row>
 
       <motion.div
-        initial={{ opacity: 0, x: 50 }}
+        initial={{ opacity: 0, x: 100 }}
         whileInView={{
           opacity: 1,
           x: 0,
@@ -93,11 +100,11 @@ export const App = () => {
             <h1>{t("whyMe.mainQuestion")}</h1>
             <Row>
               <motion.p
-                initial={{ opacity: 0, x: 500 }}
+                initial={{ opacity: 0, x: 100 }}
                 whileInView={{
                   opacity: 1,
                   x: 0,
-                  transition: { delay: 0.8, duration: 0.5 },
+                  transition: { delay: 1, duration: 0.5 },
                 }}
                 viewport={{ once: false, amount: 0.5 }}
               >
@@ -113,7 +120,7 @@ export const App = () => {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, x: 50 }}
+        initial={{ opacity: 0, x: 100 }}
         whileInView={{
           opacity: 1,
           x: 0,
@@ -193,7 +200,7 @@ export const App = () => {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, x: 50 }}
+        initial={{ opacity: 0, x: 100 }}
         whileInView={{
           opacity: 1,
           x: 0,

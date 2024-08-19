@@ -30,12 +30,14 @@ i18n
             contact: "Kontakt",
           },
           contact: {
-            sectionTitle: "Skontaktuj się ze mną",
+            sectionTitle: "Cenne uwagi? Może oferta pracy? Napisz Do mnie!",
             name: "Imię",
             surname: "Nazwisko",
             email: "Adres email",
             phoneNumber: "Telefon",
+            phoneNumberPlaceHolder: "(Opcjonalnie)",
             yourMessage: "Twoja wiadomość",
+            button: "Wyślij",
           },
           skills: {
             sectionTitle: "Moje umiejętności",
@@ -51,6 +53,12 @@ i18n
               taskFocus: "Łatwość w realizowaniu zadań i skupienie na celu",
               selfMotivation: "Chęć i motywacja do nauki i samorozwoju",
             },
+          },
+          footer: {
+            moreInfo: "Wiecej informacji o mnie znajdziesz na",
+          },
+          swal: {
+            sent: "Twoja wiadomość została wysłana!",
           },
         },
       },
@@ -75,12 +83,14 @@ i18n
             contact: "Contact",
           },
           contact: {
-            sectionTitle: "Contact me",
+            sectionTitle: "Valuable insights? Maybe a job offer? Contact me!",
             name: "Name",
             surname: "Surname",
             email: "E-mail address",
             phoneNumber: "Phone number",
+            phoneNumberPlaceHolder: "(Optional)",
             yourMessage: "Your message",
+            button: "Send",
           },
           skills: {
             sectionTitle: "My skills",
@@ -97,6 +107,12 @@ i18n
               selfMotivation:
                 "Desire and motivation for learning and self-improvement",
             },
+          },
+          footer: {
+            moreInfo: "You can find more information about me on",
+          },
+          swal: {
+            sent: "Your message has been sent!",
           },
         },
       },

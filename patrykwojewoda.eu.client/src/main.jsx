@@ -8,6 +8,8 @@ import { ProjectsPage } from "./pages/ProjectsPage.jsx";
 import { ReferencesPage } from "./pages/ReferencesPage.jsx";
 import { ContactPage } from "./pages/ContactPage.jsx";
 import "./i18n.js";
+import { Footer } from "./components/Footer.jsx";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -19,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <>
               <TopMenu />
               <App />
+              <Footer />
             </>
           }
         />
